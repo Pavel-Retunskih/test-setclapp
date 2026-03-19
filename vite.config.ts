@@ -1,5 +1,5 @@
 import path from "path";
-import { defineConfig } from "vitest/config";
+import {defineConfig} from "vitest/config";
 import react from "@vitejs/plugin-react";
 
 const alias = {
@@ -12,11 +12,12 @@ const alias = {
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/test-setclapp/',
   plugins: [react()],
   server: {
     port: 3000,
   },
-  resolve: { alias },
+  resolve: {alias},
   test: {
     globals: true,
     environment: "node",
